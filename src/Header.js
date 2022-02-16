@@ -1,10 +1,24 @@
 import React from "react";
 import "./Header.css";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import { Avatar } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 function Header() {
   return (
     <div className="header">
       <div className="header_left">
-        <h1>header</h1>
+        <Avatar className="header_avatar" alt="ritish jaiswal" />
+        <AccessTimeIcon />
+      </div>
+
+      <div className="header_search">
+        <SearchIcon />
+        <input placeholder="search" type="text" />
+      </div>
+
+      <div className="header_right">
+        <HelpOutlineOutlinedIcon />
       </div>
     </div>
   );
