@@ -5,7 +5,12 @@ function Message({ message, timestamp, user, userImage }) {
     <div className="message">
       <img src={userImage} alt="" />
       <div className="message_info">
-        <h4>{user} timestamp....</h4>
+        <h4>
+          {user}{" "}
+          <span className="message_timeStamp">
+            {new Date(timestamp?.toDate()).toUTCString()}
+          </span>
+        </h4>
         <p>{message}</p>
       </div>
     </div>
