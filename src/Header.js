@@ -4,11 +4,18 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { Avatar } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
+import { useStatevalue } from "./StateProvider";
 function Header() {
+  const [{ user }] = useStatevalue();
   return (
     <div className="header">
       <div className="header_left">
-        <Avatar className="header_avatar" alt="ritish jaiswal" />
+        <Avatar
+          className="header_avatar"
+          alt={user?.displayName}
+          src={user?.photoUrl}
+        />
+
         <AccessTimeIcon />
       </div>
 

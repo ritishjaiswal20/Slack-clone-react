@@ -18,10 +18,11 @@ import {
   InsertComment,
   PeopleAlt,
 } from "@material-ui/icons";
+import { useStatevalue } from "./StateProvider";
 
 function Sidebar() {
   const [channels, setChannels] = useState([[]]);
-
+  const [{ user }] = useStatevalue();
   useEffect(() => {
     db.collection("rooms").onSnapshot((snapshot) =>
       setChannels(
@@ -39,7 +40,7 @@ function Sidebar() {
           <h2>Clever programmer</h2>
           <h3>
             <FiberManualRecordIcon />
-            Ritish jaiswal
+            {user?.displayName}
           </h3>
         </div>
 
