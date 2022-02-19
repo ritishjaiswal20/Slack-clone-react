@@ -16,6 +16,7 @@
   object-fit: contain;
   height: 200px;
   margin-bottom: 40px;
+  background-color: white;
 }
 .login_container > button {
   margin-top: 50px;
